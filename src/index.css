@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-lime: #7ce000;
+    --brand-lime-hover: #6ec800;
+    --brand-bg: #09130e;
+    --brand-card: #121f18;
+  }
+
+  body {
+    font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Hide scrollbar while preserving scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Button pulse and action gradients */
+.btn-action-gradient {
+  background: linear-gradient(180deg, #9DF817 0%, #75DB00 100%);
+  box-shadow: 0 10px 25px -4px rgba(136, 240, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-hero {
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* High contrast mode support */
+.high-contrast {
+  filter: contrast(125%) brightness(105%);
+}
+
+.font-size-large {
+  font-size: 112%;
+}
+
+.font-size-xlarge {
+  font-size: 125%;
+}
