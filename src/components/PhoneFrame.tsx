@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScreenType, UserRole } from '../types';
-import { Home, Dumbbell, BarChart3, Heart, User, Users, Settings, Database, Code, Sliders, Volume2, Maximize2, Minimize2 } from 'lucide-react';
+import { Home, Dumbbell, BarChart3, Heart, User, Users, Settings, Database, Code, Sliders, Volume2, Maximize2, Minimize2, Server } from 'lucide-react';
 
 interface PhoneFrameProps {
   children: React.ReactNode;
@@ -10,6 +10,7 @@ interface PhoneFrameProps {
   onOpenAccessibility: () => void;
   onOpenJsonModal: () => void;
   onOpenSqlModal: () => void;
+  onOpenHostingerModal: () => void;
   isFullscreen: boolean;
   onToggleFullscreen: () => void;
 }
@@ -22,6 +23,7 @@ export const PhoneFrame: React.FC<PhoneFrameProps> = ({
   onOpenAccessibility,
   onOpenJsonModal,
   onOpenSqlModal,
+  onOpenHostingerModal,
   isFullscreen,
   onToggleFullscreen,
 }) => {
@@ -91,6 +93,15 @@ export const PhoneFrame: React.FC<PhoneFrameProps> = ({
           >
             <Database className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Banco SQL</span>
+          </button>
+
+          <button
+            onClick={onOpenHostingerModal}
+            title="Guia de Implantação na Hostinger (hPanel / VPS / MySQL)"
+            className="flex items-center gap-1 px-2.5 py-1 bg-[#281b3d] hover:bg-[#392458] text-[#c084fc] rounded-md border border-[#4c2d79] transition active:scale-95"
+          >
+            <Server className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline font-bold">Hostinger Deploy</span>
           </button>
 
           <button

@@ -17,6 +17,7 @@ import { PhoneFrame } from './components/PhoneFrame';
 import { AccessibilityModal } from './components/AccessibilityModal';
 import { JsonDataModal } from './components/JsonDataModal';
 import { SqlArchitectureModal } from './components/SqlArchitectureModal';
+import { HostingerDeployModal } from './components/HostingerDeployModal';
 
 // Screens
 import { SplashScreen } from './screens/SplashScreen';
@@ -48,6 +49,7 @@ export default function App() {
   const [isAccessibilityOpen, setIsAccessibilityOpen] = useState(false);
   const [isJsonModalOpen, setIsJsonModalOpen] = useState(false);
   const [isSqlModalOpen, setIsSqlModalOpen] = useState(false);
+  const [isHostingerModalOpen, setIsHostingerModalOpen] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   // Accessibility
@@ -186,6 +188,7 @@ export default function App() {
         onOpenAccessibility={() => setIsAccessibilityOpen(true)}
         onOpenJsonModal={() => setIsJsonModalOpen(true)}
         onOpenSqlModal={() => setIsSqlModalOpen(true)}
+        onOpenHostingerModal={() => setIsHostingerModalOpen(true)}
         isFullscreen={isFullscreen}
         onToggleFullscreen={() => setIsFullscreen(!isFullscreen)}
       >
@@ -345,6 +348,11 @@ export default function App() {
       <SqlArchitectureModal
         isOpen={isSqlModalOpen}
         onClose={() => setIsSqlModalOpen(false)}
+      />
+
+      <HostingerDeployModal
+        isOpen={isHostingerModalOpen}
+        onClose={() => setIsHostingerModalOpen(false)}
       />
     </div>
   );
