@@ -1,6 +1,12 @@
-# Guia Completo de Implantação do 60+ FIT na Hostinger
+# Guia Completo de Implantação do 60+ FIT AppWeb na Hostinger
 
-Este documento fornece o passo a passo detalhado para implantar o aplicativo **60+ FIT - Musculação e Funcionalidade** em qualquer plano da **Hostinger** (Hospedagem Compartilhada, Cloud Hosting ou VPS).
+Este documento fornece o passo a passo detalhado para implantar o **60+ FIT AppWeb (Progressive Web Application)** em qualquer plano da **Hostinger** (Hospedagem Compartilhada, Cloud Hosting ou VPS).
+
+### O que torna este projeto uma versão "AppWeb" ideal para a Hostinger?
+1. **Instalável no Celular e Desktop (PWA):** Os alunos e professores podem instalar o app diretamente pelo navegador (Safari no iPhone ou Chrome no Android/PC) sem precisar de lojas de aplicativos (Google Play / App Store).
+2. **Modo Duplo Responsivo:** Funciona tanto no **Modo Celular (iPhone)** quanto no **Modo AppWeb Amplo (Desktop/Tablet)** para academias e consultórios.
+3. **Cache Inteligente & Suporte Offline:** Service Worker (`sw.js`) e Web App Manifest pré-gerados com Workbox, carregando treinos e telas mesmo em conexões lentas ou instáveis.
+4. **Deploy de 1 Clique via hPanel:** Roda 100% no servidor web LiteSpeed / Apache da Hostinger com `.htaccess` anti-erro 404 para SPAs.
 
 ---
 

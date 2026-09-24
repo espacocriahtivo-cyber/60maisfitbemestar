@@ -18,6 +18,7 @@ import { AccessibilityModal } from './components/AccessibilityModal';
 import { JsonDataModal } from './components/JsonDataModal';
 import { SqlArchitectureModal } from './components/SqlArchitectureModal';
 import { HostingerDeployModal } from './components/HostingerDeployModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 // Screens
 import { SplashScreen } from './screens/SplashScreen';
@@ -185,12 +186,6 @@ export default function App() {
         currentScreen={currentScreen}
         onNavigate={setCurrentScreen}
         userRole={userRole}
-        onOpenAccessibility={() => setIsAccessibilityOpen(true)}
-        onOpenJsonModal={() => setIsJsonModalOpen(true)}
-        onOpenSqlModal={() => setIsSqlModalOpen(true)}
-        onOpenHostingerModal={() => setIsHostingerModalOpen(true)}
-        isFullscreen={isFullscreen}
-        onToggleFullscreen={() => setIsFullscreen(!isFullscreen)}
       >
         {/* Render the active screen according to user flow */}
         {currentScreen === 'splash' && (
@@ -354,6 +349,8 @@ export default function App() {
         isOpen={isHostingerModalOpen}
         onClose={() => setIsHostingerModalOpen(false)}
       />
+
+      <OfflineIndicator />
     </div>
   );
 }
